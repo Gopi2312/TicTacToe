@@ -16,11 +16,11 @@ class CheckLeft extends Check
     		{
     			if(ch[i][j]== 'x')
     			{
-    				flag++;
+    				flagleft++;
     			}
     			else if(ch[i][j]== 'o')
     			{
-    				flag1++;
+    				flagleft1++;
     			}
     		}
     		if(flagleft == size)
