@@ -9,17 +9,17 @@ class CheckRight extends Check
     {
     	for(int i=0;i<ch.length;i++) //checkrow
     	{
-    		int flag = 0;
-        	int flag1 = 0;
+    		int flagright = 0;
+        	int flagright1 = 0;
     		for(int j=0;j<ch.length;j++)
     		{
     			if(ch[i][j]== 'x')
     			{
-    				flag++;
+    				flagright++;
     			}
     			else if(ch[i][j]== 'o')
     			{
-    				flag1++;
+    				flagright1++;
     			}
     		}
     		if(flag == size)
