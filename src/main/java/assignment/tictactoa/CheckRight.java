@@ -22,12 +22,12 @@ class CheckRight extends Check
     				flagright1++;
     			}
     		}
-    		if(flag == size)
+    		if(flagright == size)
     		{
     			ps.print(str1);
     			System.exit(0);
     		}
-    		if(flag1 == size)
+    		if(flagright1 == size)
     		{
     			ps.print(str2);
     			System.exit(0);
