@@ -10,8 +10,8 @@ class CheckLeft extends Check
     {
     	for(int j=0;j<ch.length;j++) //checkcolumn
     	{
-    		int flag = 0;
-        	int flag1 = 0;
+    		int flagleft = 0;
+        	int flagleft1 = 0;
     		for(int i=0;i<ch.length;i++)
     		{
     			if(ch[i][j]== 'x')
@@ -23,12 +23,12 @@ class CheckLeft extends Check
     				flag1++;
     			}
     		}
-    		if(flag == size)
+    		if(flagleft == size)
     		{
     			ps.print(str1);
     			System.exit(0);
     		}
-    		if(flag1 == size)
+    		if(flagleft1 == size)
     		{
     			ps.print(str2);
     			System.exit(0);
