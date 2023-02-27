@@ -1,7 +1,4 @@
 package assignment.tictactoa;
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.logging.Logger;
 public class Tictactoa
@@ -11,10 +8,8 @@ public class Tictactoa
         Logger l = Logger.getLogger("hi");
         Scanner sc = new Scanner(System.in);
         XoBoard obj = new XoBoard();
-        Check xb;
         int position;
         int size=obj.size;
-        char[][] ch = obj.ch;
         int i=0;
         obj.printArray();
         l.info("Player 1  x");
@@ -31,14 +26,8 @@ public class Tictactoa
                 	i--;
                 }
                 obj.printArray();
-                xb = new CheckRight(size,ch);
-                xb.check();
-				xb = new CheckLeft(size,ch);
-				xb.check();
-				xb = new CheckDiagnolRight(size,ch);
-				xb.check();
-				xb = new CheckDiagnolLeft(size,ch);
-				xb.check();
+                obj.player();
+                
             }
             else
             {
@@ -50,14 +39,7 @@ public class Tictactoa
                 	i--;
                 }
                 obj.printArray();
-                xb = new CheckRight(size,ch);
-                xb.check();
-				xb = new CheckLeft(size,ch);
-				xb.check();
-				xb = new CheckDiagnolRight(size,ch);
-				xb.check();
-				xb = new CheckDiagnolLeft(size,ch);
-				xb.check();
+                obj.player();
             }
             i++;
             if(i>=9)
