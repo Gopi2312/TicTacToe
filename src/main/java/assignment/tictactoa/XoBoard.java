@@ -7,6 +7,7 @@ class XoBoard
 {
     PrintStream ps = new PrintStream(new FileOutputStream(FileDescriptor.out));
     Scanner is = new Scanner(System.in);
+    Check xb;
     char[][] ch;
     int size;
     XoBoard()
@@ -48,5 +49,16 @@ class XoBoard
         	return 1;
         }
         return 0;
+    }
+    void player()
+    {
+    	xb = new CheckRight(size,ch);
+        xb.check();
+		xb = new CheckLeft(size,ch);
+		xb.check();
+		xb = new CheckDiagnolRight(size,ch);
+		xb.check();
+		xb = new CheckDiagnolLeft(size,ch);
+		xb.check();
     }
 }
