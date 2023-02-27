@@ -6,14 +6,14 @@ import java.util.Scanner;
 class XoBoard
 {
     PrintStream ps = new PrintStream(new FileOutputStream(FileDescriptor.out));
-    Scanner is = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     Check xb;
     char[][] ch;
     int size;
     XoBoard()
     {
         ps.print("Enter the size");
-        this.size = is.nextInt();
+        this.size = sc.nextInt();
         ch=new char[size][size];
         for(int i=0;i<size;i++)
         {
