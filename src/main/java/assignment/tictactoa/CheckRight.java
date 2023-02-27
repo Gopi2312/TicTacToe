@@ -9,29 +9,20 @@ class CheckRight extends Check
     {
     	for(int i=0;i<ch.length;i++) //checkrow
     	{
-    		int flagright = 0;
-        	int flagright1 = 0;
+    		int flag = 0;
+        	int flag1 = 0;
     		for(int j=0;j<ch.length;j++)
     		{
     			if(ch[i][j]== 'x')
     			{
-    				flagright++;
+    				flag++;
     			}
     			else if(ch[i][j]== 'o')
     			{
-    				flagright1++;
+    				flag1++;
     			}
     		}
-    		if(flagright == size)
-    		{
-    			ps.print(str1);
-    			System.exit(0);
-    		}
-    		if(flagright1 == size)
-    		{
-    			ps.print(str2);
-    			System.exit(0);
-    		}
+    		winner(flag, flag1);
     	}
     }
 }
