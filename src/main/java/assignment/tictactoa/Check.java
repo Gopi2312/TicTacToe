@@ -1,16 +1,13 @@
 package assignment.tictactoa;
 
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-
+import java.util.logging.Logger;
 abstract class Check
 {
-	PrintStream ps = new PrintStream(new FileOutputStream(FileDescriptor.out));
+	Logger logger = Logger.getLogger("hi");
 	int size;
 	char[][] ch;
-	String str1 = "Player 1 Winner";
-	String str2 = "Player 2 Winner";
+    	String str1 = "Player 1 Winner";
+    	String str2 = "Player 2 Winner";
 	Check(int size,char[][] ch)
 	{
 		this.size = size;
@@ -20,12 +17,12 @@ abstract class Check
 	{
 		if(flag == size)
 		{
-			ps.print(str1);
+			logger.info(str1);
 			System.exit(0);
 		}
 		if(flag1 == size)
 		{
-			ps.print(str2);
+			logger.info(str2);
 			System.exit(0);
 		}
 	}
