@@ -5,30 +5,21 @@ class CheckDiagnolLeft extends Check
 	{
 		super(size,ch);
 	}
-    public void check()
-    {
-    	int p1=0;
-    	int p2=0;
+    	public void check()
+    	{
+    	int flag=0;
+    	int flag1=0;
     	for(int i=0;i<ch.length;i++) //check left diagnole
     	{
     		if(ch[i][i]=='x')
     		{
-    			p1++;
+    			flag++;
     		}
     		else if(ch[i][i]=='o')
     		{
-    			p2++;
+    			flag1++;
     		}
     	}
-    	if(p1 == size)
-		{
-			ps.print(str1);
-			System.exit(0);
-		}
-		if(p2 == size)
-		{
-			ps.print(str2);
-			System.exit(0);
-		}
+    	winner(flag, flag1);
      }
 }
