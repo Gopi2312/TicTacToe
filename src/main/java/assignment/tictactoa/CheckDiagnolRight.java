@@ -1,5 +1,4 @@
 package assignment.tictactoa;
-
 class CheckDiagnolRight extends Check
 {
 	CheckDiagnolRight(int size,char[][] ch)
@@ -8,8 +7,8 @@ class CheckDiagnolRight extends Check
 	}
 	public void check()
 	{
-    	int play1=0;
-    	int play2=0;
+    	int flag=0;
+    	int flag1=0;
     	for(int j=0;j<ch.length;j++) //check right diagnole
     	{
     		for(int i=0;i<ch.length;i++)
@@ -18,24 +17,15 @@ class CheckDiagnolRight extends Check
     			{
 	    			if(ch[i][j]== 'x')
 	    			{
-	    				play1++;
+	    				flag++;
 	    			}
 	    			else if(ch[i][j]== 'o')
 	    			{
-	    				play2++;
+	    				flag1++;
 	    			}
     			}
     		}
     	}
-		if(play1 == size)
-		{
-			ps.print(str1);
-			System.exit(0);
-		}
-		if(play2 == size)
-		{
-			ps.print(str2);
-			System.exit(0);
-		}
+    	winner(flag, flag1);
     }
 }
